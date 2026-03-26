@@ -1,0 +1,9 @@
+[phases]
+setup = { cmds = [] }
+
+[variables]
+NIXPACKS_PHP_VERSION = "8.1"
+PHP_VERSION = "8.1"
+
+[build]
+builder = "nixpacks"
