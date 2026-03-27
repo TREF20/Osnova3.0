@@ -10,14 +10,14 @@
     box-sizing: border-box;
 }
 
+/* Основной фон всего сайта — мягкий тёплый градиент */
 body {
-    background: #fdfaf7; /* тёплый бежевый */
-    color: #2d1b12;
-    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(135deg, #f9f4ed 0%, #f4ede4 35%, #e8d9cc 70%, #d9c2b0 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #2c1f1a;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.7;
-    font-weight: 400;
-    font-size: 16px;
-    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -28,9 +28,9 @@ h1, h2, h3 {
 }
 
 .container {
-    max-width: 1360px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 24px;
 }
 
 /* Шапка */
@@ -342,10 +342,10 @@ textarea {
 }
 
 .product-card {
-    background: white;
-    border-radius: 24px;
+background: white;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
     transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
     opacity: 0;
     transform: translateY(60px);
@@ -503,7 +503,6 @@ textarea {
 /* Секция категорий — теперь нормальный размер */
 .categories-section {
     padding: 100px 0 80px;
-    background: #fdfaf7;
 }
 
 .category-grid {
@@ -514,15 +513,16 @@ textarea {
 
 .category-card {
     position: relative;
-    border-radius: 24px;
+    border-radius: 20px;
     overflow: hidden;
     height: 380px; /* нормальная высота, не на весь экран */
     text-decoration: none;
     color: white;
     transition: all 0.5s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     opacity: 0;
     transform: translateY(60px);
+    background: white;
 }
 
 .category-card.visible {
@@ -576,7 +576,6 @@ textarea {
 /* Featured / новинки */
 .featured-section {
     padding: 80px 0 120px;
-    background: #fdfaf7;
 }
 
 /* ==============================================
@@ -1117,4 +1116,23 @@ footer::before {
     .product-info {
         padding: 40px 30px;
     }
+}
+
+/* Белые контейнеры для контента */
+.content-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    margin: 40px auto;
+    max-width: 1280px;
+}
+
+/* Для категорий и новинок */
+.categories-section .container,
+.featured-section .container {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 28px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
 }

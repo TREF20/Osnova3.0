@@ -68,7 +68,7 @@ public function category(Request $request, $slug)
         $query->latest();
     }
 
-    // Добавляем with('images') — ВАЖНО!
+    // ВАЖНО: подгружаем все фото
     $products = $query->with('images')->paginate(12)->appends($request->query());
 
     return view('products.category', compact('products', 'category'));
